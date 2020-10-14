@@ -96,3 +96,16 @@ void push(pilha p, Elemento e){
     p = enesimo_no(p); 
     p->elemento = e;
 }
+
+Elemento pop(pilha p){
+    pilha aux;
+    Elemento e;
+    while (p->prox != NULL){
+        aux = p;
+        p = p->prox;
+    }
+    e = p->elemento;
+    aux->prox=NULL;
+    free(p);
+    return e;
+}

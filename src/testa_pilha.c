@@ -124,6 +124,18 @@ TEST(PUSH, ELEMENTO){
     printf("\n%p = %p\n", x, p1->elemento);
 }
 
+TEST(POP, ELEMENTO){
+    Elemento x;
+    pilha p1 = createStack();
+    pilha p2 = createStack();
+    pilha p3 = createStack();
+    p1->prox = p2;
+    p2->prox = p3;
+    p3->elemento = x;
+    ASSERT_EQ(x, pop(p1));
+    ASSERT_EQ(NULL, p2->prox);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
