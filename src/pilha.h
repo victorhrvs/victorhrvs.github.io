@@ -1,9 +1,6 @@
 #ifndef PILHA_H
 #define PILHA_H
 
-int add(int , int );
-int sub(int , int );
-
 typedef int ItemType; 
 
 //Estrutura do Elemento
@@ -12,16 +9,31 @@ struct el{
 };
 typedef struct el* Elemento;
 
-
-struct pilha{
-	Elemento elemento = NULL;
-	struct pilha *prox ;
+//Estrutura da Pilha
+struct plha{
+	Elemento elemento;
+	struct plha *prox ;
 };
-typedef struct pilha* Pilha;
+typedef struct plha* pilha;
 
 
-int isEmpty(Pilha);
+int isEmpty(pilha);
 //retorna verdadeiro se a pilha está vazia e falso caso contrário
+
+int isFull(pilha);
+//retorna verdadeiro se a pilha está cheia e falso caso contrário
+
+pilha createStack();
+//cria pilha – retorna pilha
+
+int destroyStack(pilha);
+//destrói pilha
+
+int size(pilha);
+//retorna int tamanho da pilha
+
+int setSize(pilha, int);
+//muda o tamanho da pilha – retorna True se deu certo, False caso contrário
 
 /*
 void push(pilha, elemento);
@@ -33,22 +45,5 @@ elemento pop(pilha);
 elemento top(pilha);
 //retorna elemento do topo da pilha sem modificar a pilha – retorna um elemento
 
-int size(pilha);
-//retorna int tamanho da pilha
-
-bool setSize(pilha, int);
-//muda o tamanho da pilha – retorna True se deu certo, False caso contrário
-
-bool isFull(pilha);
-//retorna verdadeiro se a pilha está cheia e falso caso contrário
-
-bool isEmpty(pilha);
-//retorna verdadeiro se a pilha está vazia e falso caso contrário
-
-pilha createStack();
-//cria pilha – retorna pilha
-
-void destroyStack(pilha);
-//destrói pilha
 */
 #endif
