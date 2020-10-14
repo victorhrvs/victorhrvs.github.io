@@ -80,10 +80,19 @@ int setSize(pilha p, int n){
     
 }
 
+pilha enesimo_no(pilha p){
+    while (p->prox != NULL){
+        p = p->prox;
+    }
+    return p;
+}
+
 Elemento top(pilha p){
+    p = enesimo_no(p);   
     return p->elemento;
 }
 
 void push(pilha p, Elemento e){
+    p = enesimo_no(p); 
     p->elemento = e;
 }

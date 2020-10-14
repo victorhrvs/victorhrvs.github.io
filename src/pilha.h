@@ -41,6 +41,7 @@ Elemento top(pilha);
 void push(pilha, Elemento);
 //coloca elemento no topo da pilha
 
+pilha enesimo_no(pilha p);
 /*
 
 

@@ -109,8 +109,8 @@ TEST(TOP, ELEMENTO){
     pilha p3 = createStack();
     p1->prox = p2;
     p2->prox = p3;
-    p1->elemento = (Elemento) malloc(sizeof(Elemento));
-    ASSERT_EQ(p1->elemento, top(p1));
+    p3->elemento = (Elemento) malloc(sizeof(Elemento));
+    ASSERT_EQ(p3->elemento, top(p1));
     //printf("%p = %p", p1->elemento, top(p1));
     ASSERT_EQ(TRUE, destroyStack(p1));
 }
