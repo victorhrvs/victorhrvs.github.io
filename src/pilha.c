@@ -62,13 +62,13 @@ int setSize(pilha p, int n){
     if(size(p)< n){
         aux = p;
         while(size(p) < n){
-            printf("%d ",size(p));
+            //printf("%d ",size(p));
                 
                 if(aux->prox == NULL){
                 
-                    printf("No %p\n", p);
+                    //printf("No %p\n", p);
                     aux->prox = createStack(); 
-                    printf("No %p\n", p);
+                    //printf("No %p\n", p);
                 }
             aux = aux->prox;   
         }
@@ -78,4 +78,8 @@ int setSize(pilha p, int n){
         return FALSE;
     }
     
+}
+
+Elemento top(pilha p){
+    return p->elemento;
 }

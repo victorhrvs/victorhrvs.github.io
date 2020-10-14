@@ -89,6 +89,8 @@ TEST(SetSize, True){
     p2->prox = p3;
     ASSERT_EQ(TRUE, setSize(p1, 9));
     ASSERT_EQ(9, size(p1));
+    ASSERT_EQ(TRUE, destroyStack(p1));
+
 }
 TEST(SetSize, False){
     //Se o tamanho escolhido for menor que o tamanho atual da pilha, o tamanho não será modificado para que não ocorra a perda de informação no final da pilha
@@ -100,6 +102,19 @@ TEST(SetSize, False){
     ASSERT_EQ(FALSE, setSize(p1, 2));
     ASSERT_EQ(3, size(p1));
 }
+
+TEST(TOP, ELEMENTO){
+    pilha p1 = createStack();
+    pilha p2 = createStack();
+    pilha p3 = createStack();
+    p1->prox = p2;
+    p2->prox = p3;
+    p1->elemento = (Elemento) malloc(sizeof(Elemento));
+    ASSERT_EQ(p1->elemento, top(p1));
+    //printf("%p = %p", p1->elemento, top(p1));
+    ASSERT_EQ(TRUE, destroyStack(p1));
+}
+
 
 
 int main(int argc, char **argv) {

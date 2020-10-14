@@ -35,15 +35,16 @@ int size(pilha);
 int setSize(pilha, int);
 //muda o tamanho da pilha – retorna True se deu certo, False caso contrário
 
+Elemento top(pilha);
+//retorna elemento do topo da pilha sem modificar a pilha – retorna um elemento
+
+
 /*
 void push(pilha, elemento);
 //coloca elemento no topo da pilha
 
 elemento pop(pilha);
 //retira elemento do topo da pilha – retorna um elemento
-
-elemento top(pilha);
-//retorna elemento do topo da pilha sem modificar a pilha – retorna um elemento
 
 */
 #endif
