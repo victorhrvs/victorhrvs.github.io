@@ -83,3 +83,7 @@ int setSize(pilha p, int n){
 Elemento top(pilha p){
     return p->elemento;
 }
+
+void push(pilha p, Elemento e){
+    p->elemento = e;
+}

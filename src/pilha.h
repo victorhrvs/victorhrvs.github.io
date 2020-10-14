@@ -38,10 +38,11 @@ int setSize(pilha, int);
 Elemento top(pilha);
 //retorna elemento do topo da pilha sem modificar a pilha – retorna um elemento
 
+void push(pilha, Elemento);
+//coloca elemento no topo da pilha
 
 /*
-void push(pilha, elemento);
-//coloca elemento no topo da pilha
+
 
 elemento pop(pilha);
 //retira elemento do topo da pilha – retorna um elemento

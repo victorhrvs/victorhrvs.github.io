@@ -115,7 +115,14 @@ TEST(TOP, ELEMENTO){
     ASSERT_EQ(TRUE, destroyStack(p1));
 }
 
-
+TEST(PUSH, ELEMENTO){
+    pilha p1 = createStack();
+    Elemento x;
+    push(p1, x);
+    
+    ASSERT_EQ(x, p1->elemento);
+    printf("\n%p = %p\n", x, p1->elemento);
+}
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
