@@ -4,5 +4,5 @@
 
 Histórico de commits: https://github.com/victorhrvs/victorhrvs.github.io/commits/master
 
-Para compilação basta executar o comando make
+Para compilar basta executar o comando make
 
