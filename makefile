@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-I.
 LIBS=-lgtest -lgtest_main -lpthread
-COBERTURA = -ftest-coverage -fprofile-arcs
+GCOV = -ftest-coverage -fprofile-arcs
 DEPS = pilha.h
 
 #%.o: %.c $(DEPS)
